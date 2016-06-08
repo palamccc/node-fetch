@@ -111,6 +111,7 @@ function Fetch(url, opts) {
 
 		// send request
 		var req = send(options);
+		if (opts.onRequest) opts.onRequest(req);
 		var reqTimeout;
 
 		if (options.timeout) {
